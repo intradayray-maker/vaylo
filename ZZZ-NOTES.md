@@ -31,3 +31,19 @@ STRIPE_WEBHOOK_SECRET
 STRIPE_WEBHOOK_SECRET - is the new one i just created..
 
 do i also need STRIPE_SECRET_KEY
+
+
+
+
+
+
+
+
+
+price_1Tn06HKLveVAZ0tjPoyuhd5N
+
+
+
+
+
+price_1Tn4GvKLveVAZ0tju70VZV63
