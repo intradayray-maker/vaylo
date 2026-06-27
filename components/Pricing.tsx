@@ -2,16 +2,43 @@
 
 import { Check, XMark } from "@/components/ui/Checks"
 
+const stripePriceIds = {
+  basic: process.env.NEXT_PUBLIC_PRICE_BASIC,
+  standard: process.env.NEXT_PUBLIC_PRICE_STANDARD,
+  premium: process.env.NEXT_PUBLIC_PRICE_PREMIUM,
+} as const
+
 export default function Pricing() {
 
   async function handleBuy(priceId: string) {
-    const res = await fetch("/api/stripe", {
-      method: "POST",
-      body: JSON.stringify({ priceId }),
-    })
+    if (!priceId) {
+      console.error("Missing Stripe price ID")
+      return
+    }
 
-    const data = await res.json()
-    window.location.href = data.url
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId })
+      })
+
+      if (!res.ok) {
+        const error = await res.json().catch(() => null)
+        console.error("Stripe checkout error:", error ?? res.statusText)
+        return
+      }
+
+      const data = await res.json()
+
+      if (data?.url) {
+        window.location.assign(data.url)
+      } else {
+        console.error("Stripe error:", data)
+      }
+    } catch (err) {
+      console.error("Checkout request failed:", err)
+    }
   }
 
   return (
@@ -46,7 +73,8 @@ export default function Pricing() {
           </ul>
 
           <button
-            onClick={() => handleBuy(process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC!)}
+            type="button"
+            onClick={() => handleBuy(stripePriceIds.basic ?? "")}
             className="
               mt-auto
               bg-accent
@@ -78,7 +106,6 @@ export default function Pricing() {
           "
         >
 
-          {/* ⭐ Badge */}
           <div
             className="
               absolute
@@ -122,7 +149,8 @@ export default function Pricing() {
           </ul>
 
           <button
-            onClick={() => handleBuy(process.env.NEXT_PUBLIC_STRIPE_PRICE_STANDARD!)}
+            type="button"
+            onClick={() => handleBuy(stripePriceIds.standard ?? "")}
             className="
               mt-auto
               bg-accent
@@ -164,7 +192,8 @@ export default function Pricing() {
           </ul>
 
           <button
-            onClick={() => handleBuy(process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM!)}
+            type="button"
+            onClick={() => handleBuy(stripePriceIds.premium ?? "")}
             className="
               mt-auto
               bg-accent
@@ -182,7 +211,6 @@ export default function Pricing() {
 
       </div>
 
-      {/* Influencer Boost */}
       <div className="max-w-xl mx-auto text-center mt-22 bg-card border border-border rounded-xl p-12">
         <h3 className="text-xl font-semibold mb-2">
           Influencer Boost 🚀
