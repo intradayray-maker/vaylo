@@ -16,3 +16,9 @@
 
 
 support.vaylo@gmail.com
+
+there is NO app passwords.
+
+lets fix stripe then get back to email
+
+when i click on buy button nothing happens
