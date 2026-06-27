@@ -3,14 +3,17 @@
 import { Check, XMark } from "@/components/ui/Checks"
 
 const stripePriceIds = {
-  basic: process.env.NEXT_PUBLIC_PRICE_BASIC,
-  standard: process.env.NEXT_PUBLIC_PRICE_STANDARD,
-  premium: process.env.NEXT_PUBLIC_PRICE_PREMIUM,
+  basic: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC,
+  standard: process.env.NEXT_PUBLIC_STRIPE_PRICE_STANDARD,
+  premium: process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM,
+  test: process.env.NEXT_PUBLIC_PRICE_TEST,
 } as const
 
 export default function Pricing() {
 
   async function handleBuy(priceId: string) {
+    console.log("Using priceId:", priceId)
+
     if (!priceId) {
       console.error("Missing Stripe price ID")
       return
@@ -48,7 +51,7 @@ export default function Pricing() {
         Simple Pricing. Fast Delivery.
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
 
         {/* BASIC */}
         <div className="bg-card border border-border rounded-xl p-8 flex flex-col">
@@ -75,53 +78,16 @@ export default function Pricing() {
           <button
             type="button"
             onClick={() => handleBuy(stripePriceIds.basic ?? "")}
-            className="
-              mt-auto
-              bg-accent
-              hover:bg-accent-hover
-              text-center
-              py-3
-              px-4
-              rounded-xl
-              shadow-glow
-              transition
-            "
+            className="mt-auto bg-accent hover:bg-accent-hover text-center py-3 px-4 rounded-xl shadow-glow transition"
           >
             Get BASIC Now
           </button>
         </div>
 
-        {/* STANDARD — MOST POPULAR */}
-        <div
-          className="
-            bg-card/90
-            border border-accent
-            rounded-xl
-            p-8
-            pt-12
-            shadow-[0_0_40px_rgba(139,92,246,0.35)]
-            flex flex-col
-            relative
-            overflow-visible
-          "
-        >
+        {/* STANDARD */}
+        <div className="bg-card/90 border border-accent rounded-xl p-8 pt-12 shadow-[0_0_40px_rgba(139,92,246,0.35)] flex flex-col relative overflow-visible">
 
-          <div
-            className="
-              absolute
-              -top-4
-              left-1/2
-              -translate-x-1/2
-              bg-accent
-              text-black
-              text-xs
-              font-semibold
-              px-4
-              py-1.5
-              rounded-full
-              z-20
-            "
-          >
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-black text-xs font-semibold px-4 py-1.5 rounded-full z-20">
             Most Popular
           </div>
 
@@ -151,16 +117,7 @@ export default function Pricing() {
           <button
             type="button"
             onClick={() => handleBuy(stripePriceIds.standard ?? "")}
-            className="
-              mt-auto
-              bg-accent
-              hover:bg-accent-hover
-              text-center
-              py-3
-              px-4
-              rounded-xl
-              transition
-            "
+            className="mt-auto bg-accent hover:bg-accent-hover text-center py-3 px-4 rounded-xl transition"
           >
             Get STANDARD Now
           </button>
@@ -194,18 +151,36 @@ export default function Pricing() {
           <button
             type="button"
             onClick={() => handleBuy(stripePriceIds.premium ?? "")}
-            className="
-              mt-auto
-              bg-accent
-              hover:bg-accent-hover
-              text-center
-              py-3
-              px-4
-              rounded-xl
-              transition
-            "
+            className="mt-auto bg-accent hover:bg-accent-hover text-center py-3 px-4 rounded-xl transition"
           >
             Get PREMIUM Now
+          </button>
+        </div>
+
+        {/* TEST PRICE */}
+        <div className="bg-card border border-yellow-500 rounded-xl p-8 flex flex-col">
+          <h3 className="text-2xl font-semibold mb-2 text-yellow-400">
+            Test — $0.01
+          </h3>
+
+          <p className="text-white/40 text-sm mb-4">
+            Use this to test Stripe checkout + webhook + email.
+          </p>
+
+          <ul className="text-white/60 mb-6 space-y-2">
+            <li><Check /> Real checkout</li>
+            <li><Check /> Webhook fires</li>
+            <li><Check /> Email confirmation</li>
+            <li><Check /> Safe to use</li>
+            <li><XMark /> Not shown to customers</li>
+          </ul>
+
+          <button
+            type="button"
+            onClick={() => handleBuy(stripePriceIds.test ?? "")}
+            className="mt-auto bg-yellow-500 hover:bg-yellow-600 text-black text-center py-3 px-4 rounded-xl transition"
+          >
+            Test Checkout ($0.01)
           </button>
         </div>
 
@@ -224,18 +199,7 @@ export default function Pricing() {
           Get your ad in front of 1M+ shoppers.
         </p>
 
-        <a
-          className="
-            bg-accent
-            hover:bg-accent-hover
-            text-center
-            py-3
-            px-14
-            rounded-xl
-            shadow-glow
-            transition
-          "
-        >
+        <a className="bg-accent hover:bg-accent-hover text-center py-3 px-14 rounded-xl shadow-glow transition">
           DM for More Info
         </a>
       </div>
@@ -243,5 +207,3 @@ export default function Pricing() {
     </section>
   )
 }
-
-// TEST 1
