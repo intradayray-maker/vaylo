@@ -22,3 +22,12 @@ there is NO app passwords.
 lets fix stripe then get back to email
 
 when i click on buy button nothing happens
+
+no i mean i have this
+
+STRIPE_SECRET_KEY
+STRIPE_WEBHOOK_SECRET 
+
+STRIPE_WEBHOOK_SECRET - is the new one i just created..
+
+do i also need STRIPE_SECRET_KEY
