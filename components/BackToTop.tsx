@@ -25,7 +25,7 @@ export default function BackToTop() {
         justify-center
         bg-gradient-to-br
         from-purple-600
-        to-fuchsia-900
+        to-fuchsia-950
         shadow-[0_0_20px_rgba(168,85,247,0.45)]
         hover:shadow-[0_0_30px_rgba(168,85,247,0.65)]
         text-white
