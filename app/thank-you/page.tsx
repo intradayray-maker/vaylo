@@ -629,7 +629,12 @@ export default function ThankYouPage() {
             </p>
             <p>Order ID: {stripeMeta.orderId || "—"}</p>
             <p>Customer Email: {stripeMeta.customerEmail || "—"}</p>
-            <p>Purchase Time: {stripeMeta.purchaseTimestamp || "—"}</p>
+            <p>
+              Purchase Time:{" "}
+              {stripeMeta.purchaseTimestamp
+                ? new Date(stripeMeta.purchaseTimestamp).toLocaleString()
+                : "—"}
+            </p>
 
           </div>
 
