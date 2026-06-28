@@ -288,20 +288,47 @@ export default function ThankYouPage() {
 
       </div>
 
-      {/* SUCCESS MESSAGE */}
-      {submitted && (
-        <div className="bg-card border border-border rounded-xl p-10 text-center">
-          <h2 className="text-2xl font-semibold mb-4">
-            Assets Submitted 🎉
-          </h2>
-          <p className="text-white/60">
-            Thanks! Your video is now in the production queue.
-          </p>
-          <p className="text-white/60 mt-2">
-            Delivery ETA: within 24 hours.
-          </p>
-        </div>
-      )}
+{/* SUCCESS MESSAGE */}
+{submitted && (
+  <div
+    className="
+      bg-black/20
+      border border-white/10
+      rounded-xl
+      p-10
+      text-center
+      backdrop-blur-sm
+    "
+  >
+    <h2
+      className="
+        text-2xl
+        font-semibold
+        mb-4
+        bg-gradient-to-r
+        from-emerald-400
+        to-purple-500
+        bg-clip-text
+        text-transparent
+      "
+    >
+      Assets Submitted 👍🏿
+    </h2>
+
+    <p className="text-white/60">
+      Your video is now in the production queue 🚀
+    </p>
+
+    <p className="text-white/60 mt-2">
+      Delivery ETA: within 24 hours ⏳
+    </p>
+
+    <p className="text-white/60 mt-2">
+      Check your email for delivery 📬
+    </p>
+  </div>
+)}
+
 
       {!submitted && (
         <form
