@@ -145,7 +145,7 @@ Your assets have been successfully received — thank you for sending everything
 Your video is now in the production queue and our team has started working on it.
 
 What happens next:
-• Your video will be fully produced within 24 hours
+• Your video will be fully produced within 48 hours
 • You’ll receive a private delivery link via email
 • If anything is missing or unclear, we’ll reach out immediately
 

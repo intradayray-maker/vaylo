@@ -320,7 +320,7 @@ export default function ThankYouPage() {
     </p>
 
     <p className="text-white/60 mt-2">
-      Delivery ETA: within 24 hours ⏳
+      Delivery ETA: within 48 hours ⏳
     </p>
 
     <p className="text-white/60 mt-2">

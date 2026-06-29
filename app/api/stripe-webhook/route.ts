@@ -61,7 +61,7 @@ To get started, reply to this email with:
 • Any notes or style preferences
 • Optional hooks or angles you want us to highlight
 
-Delivery ETA: within 24 hours.
+Delivery ETA: within 48 hours.
 
 Talk soon,
 Ray

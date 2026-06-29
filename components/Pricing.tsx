@@ -55,24 +55,26 @@ export default function Pricing() {
         {/* BASIC */}
         <div className="bg-card border border-border rounded-xl p-8 flex flex-col">
           <h3 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-emerald-400 to-purple-500 bg-clip-text text-transparent">
-            Basic — $30
+            Basic — $50
           </h3>
 
           <p className="text-white/40 text-sm mb-4">
-            For new sellers testing product demand.
+            For brands needing quick & punchy ads.
           </p>
 
-          <ul className="text-white/60 mb-6 space-y-2">
-            <li><Check /> 1 video (9:16)</li>
-            <li><Check /> TikTok-ready</li>
-            <li><Check /> 1080×1920</li>
-            <li><Check /> Basic motion effects</li>
-            <li><Check /> Text overlays</li>
-            <li><XMark /> Multiple hooks</li>
-            <li><XMark /> Multiple styles</li>
-            <li><XMark /> Voiceover</li>
-            <li><XMark /> Priority delivery</li>
-          </ul>
+<ul className="text-white/60 mb-6 space-y-2">
+  <li><Check /> Up to 15 seconds</li>
+  <li><Check /> (1) Ad only </li>  
+  <li><Check /> UGC‑Style AI Product Ad</li>
+  <li><Check /> Hyper‑realistic AI actor</li>
+  <li><Check /> Perfect lip‑sync or voiceover</li>
+  <li><Check /> Pro video editing</li>
+  <li><Check /> Music & SFX (when needed)</li>
+  <li><Check /> Vertical or horizontal (9:16 / 16:9)</li>
+  <li><Check /> 48‑Hour delivery</li>
+  <li><Check /> 1 revision</li>
+</ul>
+
 
           <button
             type="button"
@@ -91,27 +93,25 @@ export default function Pricing() {
           </div>
 
           <h3 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-emerald-400 to-purple-500 bg-clip-text text-transparent">
-            Standard — $60
+            Standard — $90
           </h3>
 
           <p className="text-white/40 text-sm mb-4">
-            Best for growing stores needing variety.
+            Best for a FULL attention grabbing ad.
           </p>
 
-          <ul className="text-white/60 mb-6 space-y-2">
-            <li><Check /> 3 videos (9:16)</li>
-            <li><Check /> Multiple hooks</li>
-            <li><Check /> Multiple styles</li>
-            <li><Check /> Motion effects</li>
-            <li><Check /> Text overlays</li>
-            <li><Check /> Transitions</li>
-            <li><Check /> Sound design</li>
-            <li><Check /> TikTok-ready</li>
-            <li><Check /> 24-hour delivery</li>
-            <li><XMark /> Voiceover</li>
-            <li><XMark /> Influencer-ready</li>
-            <li><XMark /> Priority delivery</li>
-          </ul>
+<ul className="text-white/60 mb-6 space-y-2">
+  <li><Check /> Up to 30 seconds</li>
+  <li><Check /> (1) 30 sec Ad OR (2) 15 sec Ads </li>  
+  <li><Check /> UGC‑Style AI Product Ad</li>
+  <li><Check /> Hyper‑realistic AI actor</li>
+  <li><Check /> Perfect lip‑sync or voiceover</li>
+  <li><Check /> Pro video editing</li>
+  <li><Check /> Music & SFX (when needed)</li>
+  <li><Check /> Vertical or horizontal (9:16 / 16:9)</li>
+  <li><Check /> 48‑Hour delivery</li>
+  <li><Check /> 2 revisions</li>
+</ul>
 
           <button
             type="button"
@@ -125,27 +125,25 @@ export default function Pricing() {
         {/* PREMIUM */}
         <div className="bg-card border border-border rounded-xl p-8 flex flex-col">
           <h3 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-emerald-400 to-purple-500 bg-clip-text text-transparent">
-            Premium — $120
+            Premium — $130
           </h3>
 
           <p className="text-white/40 text-sm mb-4">
-            For brands needing maximum impact.
+            For brands needing longer video ads.
           </p>
 
-          <ul className="text-white/60 mb-6 space-y-2">
-            <li><Check /> 5 videos (9:16)</li>
-            <li><Check /> Multiple hooks</li>
-            <li><Check /> Multiple styles</li>
-            <li><Check /> Voiceover (optional)</li>
-            <li><Check /> Influencer-ready</li>
-            <li><Check /> Priority delivery</li>
-            <li><Check /> Scriptwriting</li>
-            <li><Check /> Thumbnail included</li>
-            <li><Check /> Sound design</li>
-            <li><Check /> Transitions</li>
-            <li><Check /> TikTok-ready</li>
-            <li><XMark /> Revisions included</li>
-          </ul>
+<ul className="text-white/60 mb-6 space-y-2">
+  <li><Check /> Up to 60 seconds</li>
+  <li><Check /> (1) 60 sec OR upto (3) seperate ads </li>    
+  <li><Check /> UGC‑Style AI Product Ad</li>
+  <li><Check /> Hyper‑realistic AI actor</li>
+  <li><Check /> Perfect lip‑sync or voiceover</li>
+  <li><Check /> Pro video editing</li>
+  <li><Check /> Music & SFX (when needed)</li>
+  <li><Check /> Vertical or horizontal (9:16 / 16:9)</li>
+  <li><Check /> 72‑Hour delivery</li>
+  <li><Check /> 2 revisions</li>
+</ul>
 
           <button
             type="button"

@@ -1,6 +1,6 @@
 export default function FAQ() {
   const faqs = [
-    ["How fast is delivery?", "Most orders are delivered within 24 hours."],
+    ["How fast is delivery?", "Most orders are delivered within 48 hours."],
     ["What platforms are videos optimized for?", "TikTok, Instagram Reels, YouTube Shorts, and paid ads."],
     ["Do you offer revisions?", "Yes — simple adjustments are included."],
     ["Can you add voiceover?", "Yes. We use high-quality AI voiceovers on request."],

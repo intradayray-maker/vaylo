@@ -62,7 +62,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Testimonials() {
   const reviews = [
-    { text: "Got 3 sales in the first 24 hours. Didn’t expect it to work that fast.", name: "Margret", role: "Shopify Seller", rating: 5.0 },
+    { text: "Got 3 sales in the first 48 hours. Didn’t expect it to work that fast.", name: "Margret", role: "Shopify Seller", rating: 5.0 },
     { text: "Cleanest product video I’ve ever had made. Ordering again this week.", name: "Yuhen", role: "Re-Seller", rating: 5.0 },
     { text: "Perfect for TikTok store. VERY FAST delivery.", name: "Leo", role: "Dropshipper", rating: 5.0 },
     { text: "The AI actor matched my brand vibe better than any UGC creator I’ve hired.", name: "Sothia", role: "E‑com Founder", rating: 5.0 },
